@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteNoise</title>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="dependencies/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="dependencies/all.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+    <!-- <link rel="stylesheet" href="dependencies/brands.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="dependencies/fontawesome.min.css"> -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="dependencies/select2.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" align="center">
+        <div class="mt-5">    
+            <div>
+                <h1 class="display-1 mb-3">White<span class="noise-heading">Noise</span></h1>
+                <div class="my-3">
+                    <span class="mr-2 ovr-vol">Overall Volume</span><input class="main-slider mx-3" type="range" max="100" value="100">
+                    <button class="main-mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+                </div>
+                <div class="my-4">
+                    <button class="reset-btn btn btn-outline-warning" type="button">Reset</button>
+                    <button class="main-btn btn btn-light btn-lg mx-3" type="button">Play</button>
+                    <button class="randomizer-btn btn btn-outline-warning" type="button">Randomizer</button>
+                </div>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/cricket.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/cricket.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/fire.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/fire.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/rain.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/rain.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/seaWaves.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/seaWaves.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/wind.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/wind.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/thunder.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/thunder.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class="audio-player-container my-3">
+                <audio class="audio" src="srcsound/birds.mp3" preload="auto" loop></audio>
+                <button class="bttn btn"><img src="images/birds.png"></button>
+                <input type="range" class="volume-slider ml-1 mr-2" max="100" value="50">
+                <button class="mute-btn btn btn-outline-danger" type="button"><i class="fas fa-volume-mute"></i></button>
+            </div>
+
+            <div class=" my-4">
+                <div class="mb-3">
+                    <select id="preset-box" class="preset-name js-example-basic-single" name="state">
+                    </select>
+                </div>
+                <button class="load-preset btn btn-success" type="button">Load Preset</button>
+                <button class="save-preset btn btn-info mx-2" type="button">Save Preset</button>
+                <button class="delete-preset btn btn-danger" type="button">Delete Preset</button>
+                <div class="my-2"></div>
+                <p><code class="profile-set">&#8205;</code></p>
+                
+            </div>
+            <div class="py-5"></div>
+        </div>    
+    </div>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="dependencies/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+    <script src="dependencies/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="dependencies/bootstrap.min.js"></script>
+
+    <!-- localbase -->
+    <!-- <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script> -->
+    <script src="dependencies/localbase.dev.js"></script>
+
+    <!-- select2 library -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+    <script src="dependencies/select2.min.js"></script>
+
+    <!-- Our Script-->
+    <script src="script.js"></script>   
+</body>
+
+
+</html>

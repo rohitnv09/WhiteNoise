@@ -1,0 +1,119 @@
+
+html{
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+
+body{
+   overflow-x: hidden;
+   background-color: #222831;
+   color: #EEEEEE;
+}
+
+.audio-player-container button img{
+    pointer-events: none;
+    width: 2.5rem;
+    border-width: 0;
+    padding-top: 0;
+}
+
+.bttn{
+    border-width: 0;
+    padding-top: 0;
+    outline: none;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.ovr-vol{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.main-btn{
+    min-width: 6rem;
+}
+
+.noise-heading{
+    color: #ff3b3b;
+}
+
+#preset-box{
+    min-width: 15rem;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+    outline: none;
+	overflow: hidden;
+	width: 250px;
+	height: 15px;
+	border-radius: 25px;
+	box-shadow: inset 1px 1px 5px 2px silver;
+    transition: all 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	background: #ffae00;
+	box-shadow: inset 0px 0px 0px 1px rgb(238, 155, 0),-507px 0px 13px 500px #00a10d;
+    transition: all 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	cursor: pointer;
+	width: 16px;
+	height: 15px;
+    border-radius: 50%;
+	background: #ffae00;
+	box-shadow: inset 0px 0px 0px 1px rgb(238, 155, 0),-507px 0px 13px 500px #9600db;
+    transition: all 0.5s;
+}
+
+input[type="text"] {
+    width: 15rem;
+    outline: none;
+    box-shadow: none;
+    border-width: 0;
+    border-radius: 8px;
+    padding: 0.7rem;
+    background-color: #e6e6e6;
+    color: #300b4e;
+}
+
+.select2-selection{
+    /* border-radius: 10rem; */
+    min-height: 2rem;
+    font-weight: 640;
+}
+
+.select2-results__option{
+    color: #30004d;
+}
+.select2-search__field,.select2-dropdown{
+    border-radius: 0.5rem;
+}
+
+.select2-search__field:focus,.select2-search__field:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+    background-color: #9600db;
+}
+
+@media only screen and (max-width:550px) {
+    .display-1{
+        font-size: 4rem;
+    }
+    .ovr-vol{
+        display: block;
+    }
+    input[type="range"]{
+        width: 180px;
+    }
+}
